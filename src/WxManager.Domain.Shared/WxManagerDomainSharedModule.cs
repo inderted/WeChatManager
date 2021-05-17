@@ -12,6 +12,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WxManager
 {
@@ -35,6 +36,7 @@ namespace WxManager
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            var configuration = context.Services.GetConfiguration();
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
                 options.FileSets.AddEmbedded<WxManagerDomainSharedModule>();
@@ -53,6 +55,15 @@ namespace WxManager
             Configure<AbpExceptionLocalizationOptions>(options =>
             {
                 options.MapCodeNamespace("WxManager", typeof(WxManagerResource));
+            });
+
+            context.Services.AddStackExchangeRedisCache(options =>
+            {
+                var redisConfiguration = configuration["Cache:Redis:Configuration"];
+                if (!string.IsNullOrEmpty(redisConfiguration))
+                {
+                    options.Configuration = redisConfiguration;
+                }
             });
         }
     }

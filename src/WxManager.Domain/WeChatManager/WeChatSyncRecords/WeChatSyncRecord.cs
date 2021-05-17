@@ -1,5 +1,6 @@
 ﻿using System;
 using Volo.Abp.Domain.Entities;
+using WxManager.Domain.Shared.WeChatSyncRecords;
 using WxManager.WeChatManager.WeChatConfigs;
 
 namespace WxManager.WeChatManager.WeChatSyncRecords

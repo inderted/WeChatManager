@@ -12,6 +12,7 @@ namespace WxManager
         {
             OneTimeRunner.Run(() =>
             {
+
                 /* You can add extension properties to DTOs
                  * defined in the depended modules.
                  *

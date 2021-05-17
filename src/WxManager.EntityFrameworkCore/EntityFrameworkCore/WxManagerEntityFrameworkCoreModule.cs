@@ -10,6 +10,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using WxManager.Domain.AppSettings;
 
 namespace WxManager.EntityFrameworkCore
 {
@@ -36,8 +37,6 @@ namespace WxManager.EntityFrameworkCore
         {
             context.Services.AddAbpDbContext<WxManagerDbContext>(options =>
             {
-                /* Remove "includeAllEntities: true" to create
-                 * default repositories only for aggregate roots */
                 options.AddDefaultRepositories(includeAllEntities: true);
             });
 
@@ -45,7 +44,24 @@ namespace WxManager.EntityFrameworkCore
             {
                 /* The main point to change your DBMS.
                  * See also WxManagerMigrationsDbContextFactory for EF Core tooling. */
-                options.UseMySQL();
+                switch (AppSettings.EnableDb)
+                {
+                    case "MySql":
+                        options.UseMySQL();
+                        break;
+
+                    case "SqlServer":
+                        options.UseSqlServer();
+                        break;
+
+                    case "PostgreSql":
+                        options.UseNpgsql();
+                        break;
+
+                    case "Sqlite":
+                        options.UseSqlite();
+                        break;
+                }
             });
         }
     }

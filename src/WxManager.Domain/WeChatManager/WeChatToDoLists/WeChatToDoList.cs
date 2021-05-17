@@ -1,5 +1,6 @@
 ﻿using System;
 using Volo.Abp.Domain.Entities;
+using WxManager.Domain.Shared.WeChatToDoLists;
 
 namespace WxManager.WeChatManager.WeChatToDoLists
 {

@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WxManager.Application.Caching\WxManager.Application.Caching.csproj" />
+    <ProjectReference Include="..\WxManager.Common\WxManager.Common.csproj" />
     <ProjectReference Include="..\WxManager.Domain\WxManager.Domain.csproj" />
     <ProjectReference Include="..\WxManager.Application.Contracts\WxManager.Application.Contracts.csproj" />
   </ItemGroup>

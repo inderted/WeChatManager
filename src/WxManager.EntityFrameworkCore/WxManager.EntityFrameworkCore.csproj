@@ -10,6 +10,9 @@
   <ItemGroup>
     <ProjectReference Include="..\WxManager.Domain\WxManager.Domain.csproj" />
     <PackageReference Include="Volo.Abp.EntityFrameworkCore.MySQL" Version="4.2.2" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.PostgreSql" Version="4.2.2" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="4.2.2" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.Identity.EntityFrameworkCore" Version="4.2.2" />
@@ -18,6 +21,25 @@
     <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.TenantManagement.EntityFrameworkCore" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="4.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\ApprovalDetails\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\ApprovalGroups\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\ApprovalRules\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatAnalysis\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatAutoReplys\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatGenericAttribute\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatMaterial\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatMedias\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatMenus\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatMessages\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatQrCodes\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatSendRecords\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatSyncs\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatTags\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatToDoLists\" />
+    <Folder Include="EntityFrameworkCore\Repository\WeChatManager\WeChatUsers\" />
   </ItemGroup>
 
 </Project>

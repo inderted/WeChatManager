@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Senparc.Weixin.MP" Version="16.11.400" />
     <PackageReference Include="Volo.Abp.Emailing" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="4.2.2" />
@@ -23,6 +22,24 @@
     <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.FeatureManagement.Domain" Version="4.2.2" />
     <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="4.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="WeChatManager\ApprovalDetails\IRepository\" />
+    <Folder Include="WeChatManager\ApprovalGroups\IRepository\" />
+    <Folder Include="WeChatManager\ApprovalRules\IRepository\" />
+    <Folder Include="WeChatManager\WeChatAnalysis\IRepository\" />
+    <Folder Include="WeChatManager\WeChatAutoReplys\IRepository\" />
+    <Folder Include="WeChatManager\WeChatMaterial\IRepository\" />
+    <Folder Include="WeChatManager\WeChatMedias\IRepository\" />
+    <Folder Include="WeChatManager\WeChatMenus\IRepository\" />
+    <Folder Include="WeChatManager\WeChatMessages\IRepository\" />
+    <Folder Include="WeChatManager\WeChatQrCodes\IRepository\" />
+    <Folder Include="WeChatManager\WeChatSendRecords\IRepository\" />
+    <Folder Include="WeChatManager\WeChatSyncRecords\IRepository\" />
+    <Folder Include="WeChatManager\WeChatTags\IRepository\" />
+    <Folder Include="WeChatManager\WeChatToDoLists\IRepository\" />
+    <Folder Include="WeChatManager\WeChatUsers\IRepository\" />
   </ItemGroup>
 
 </Project>

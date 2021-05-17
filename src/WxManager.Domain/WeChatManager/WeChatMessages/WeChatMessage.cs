@@ -1,5 +1,6 @@
 using System;
 using Volo.Abp.Domain.Entities;
+using WxManager.Domain.Shared.WeChatMessages;
 using WxManager.WeChatManager.WeChatConfigs;
 using WxManager.WeChatManager.WeChatUsers;
 
